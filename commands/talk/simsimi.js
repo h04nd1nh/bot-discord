@@ -5,7 +5,7 @@ module.exports = {
     category: "talk",
     aliases: ["csim"],
     run: (client, message, args) =>{
-        fetch(`https://api.simsimi.net/v1/?text=${encodeURI(args.join(' '))}&lang=vi_VN&cf=false`)
+        fetch(`https://api.simsimi.net/v2/?text=${encodeURI(args.join(' '))}&lc=vn`)
         .then(data => data.json())
         .then(result => result.success)
         .then(data => {

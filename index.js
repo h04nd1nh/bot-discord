@@ -31,7 +31,10 @@ client.on('message' ,  message => {
         if (message.author.bot && cmd.length === 0 && !message.content.startsWith(prefix)) {
             return;
         }
-   // if (!message.guild) return;
+    if (!message.guild) {
+        
+        return;
+    }
    /*if (cmd == '') {
     message.channel.send(`Chat  "${prefix}help"  để xem thông tin và các lệnh của tui :3`)
 } else if (cmd == 'help') {
